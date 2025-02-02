@@ -3,6 +3,14 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/vaibhav-pandya/data-hub/raw/refs/heads/main/customerchurn-data.zip
+  # source_URL: https://github.com/vaibhav-pandya/data-hub/raw/refs/heads/main/customerchurn-data.zip
+  # source_URL: https://github.com/vaibhav-pandya/data-hub/raw/refs/heads/main/TelcoCustomerChurn.zip
+  source_URL: https://github.com/vaibhav-pandya/data-hub/raw/refs/heads/main/Telco_customer_churn.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+#here we will do the schema validation
+data_validation:    #to validate the data if data is in correct format then only we do training pipeline 
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/Telco_customer_churn.csv
+  STATUS_FILE: artifacts/data_validation/status.txt    #give true if in correct format otherwise false

@@ -14,3 +14,14 @@ data_validation:    #to validate the data if data is in correct format then only
   root_dir: artifacts/data_validation
   unzip_data_dir: artifacts/data_ingestion/Telco_customer_churn.csv
   STATUS_FILE: artifacts/data_validation/status.txt    #give true if in correct format otherwise false
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/Telco_customer_churn.csv
+
+model_trainer:
+  model_trainer:
+  root_dir: artifacts/model_trainer
+  train_data_path: artifacts/data_transformation/train.csv
+  test_data_path: artifacts/data_transformation/test.csv
+  model_name: model.joblib

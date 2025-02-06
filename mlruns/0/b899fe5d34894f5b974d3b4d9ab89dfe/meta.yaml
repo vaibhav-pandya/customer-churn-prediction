@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/b899fe5d34894f5b974d3b4d9ab89dfe/artifacts
+end_time: 1738771363410
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b899fe5d34894f5b974d3b4d9ab89dfe
+run_name: painted-dolphin-164
+run_uuid: b899fe5d34894f5b974d3b4d9ab89dfe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738771359765
+status: 3
+tags: []
+user_id: ASUS

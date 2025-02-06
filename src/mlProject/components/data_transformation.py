@@ -10,6 +10,17 @@ from sklearn.model_selection import train_test_split
 
 from mlProject.entity.config_entity import DataTransformationConfig
 
+import os
+import pandas as pd
+import numpy as np
+import joblib
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from mlProject import logger
+
 class DataTransformation:
     def __init__(self, config: DataTransformationConfig):
         self.config = config
@@ -30,6 +41,11 @@ class DataTransformation:
         # Define target and features
         X = data.drop(columns=['customerID', 'Churn'])  # Drop non-useful and target column
         y = data['Churn'].map({'No': 0, 'Yes': 1})  # Convert Churn to 0 & 1
+
+        # imputer = SimpleImputer(strategy='most_frequent')  # Fill NaN with the most frequent value (0 or 1)
+        # y = imputer.fit_transform(y.values.reshape(-1, 1)).ravel().astype(int)  # Ensure y is an integer
+        
+
 
         # Define column categories
         numeric_features = ['tenure', 'MonthlyCharges', 'TotalCharges']
@@ -79,9 +95,16 @@ class DataTransformation:
         # Train-test split (75% train, 25% test)
         X_train, X_test, y_train, y_test = train_test_split(X_transformed, y, test_size=0.25, random_state=42)
 
+        # y_train = pd.Series(y_train)
+        # y_test = pd.Series(y_test)
+
+        # y_train = pd.Series(y_train).reset_index(drop=True)
+        # y_test = pd.Series(y_test).reset_index(drop=True)
+
+
         # Save transformed train and test data
-        train_data = pd.concat([X_train, y_train.reset_index(drop=True)], axis=1)
-        test_data = pd.concat([X_test, y_test.reset_index(drop=True)], axis=1)
+        train_data = pd.concat([X_train, y_train], axis=1)
+        test_data = pd.concat([X_test, y_test], axis=1)
 
         train_path = os.path.join(self.config.root_dir, "train.csv")
         test_path = os.path.join(self.config.root_dir, "test.csv")
@@ -95,4 +118,5 @@ class DataTransformation:
 
         print("Train shape:", train_data.shape)
         print("Test shape:", test_data.shape)
+
         

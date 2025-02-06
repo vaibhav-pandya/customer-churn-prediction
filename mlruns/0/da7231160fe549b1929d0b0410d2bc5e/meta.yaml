@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/da7231160fe549b1929d0b0410d2bc5e/artifacts
+end_time: 1738771552017
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: da7231160fe549b1929d0b0410d2bc5e
+run_name: adorable-cow-556
+run_uuid: da7231160fe549b1929d0b0410d2bc5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738771548256
+status: 3
+tags: []
+user_id: ASUS

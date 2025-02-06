@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/7448c206ab0d4727b97df99bc317b921/artifacts
+end_time: 1738776212159
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7448c206ab0d4727b97df99bc317b921
+run_name: carefree-dove-516
+run_uuid: 7448c206ab0d4727b97df99bc317b921
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776208538
+status: 3
+tags: []
+user_id: ASUS

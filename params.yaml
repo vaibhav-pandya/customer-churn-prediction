@@ -1,3 +1,9 @@
-ElasticNet:     #defining parameter for algorithm
-  alpha: 0.5
-  l1_ratio: 0.7
+XGBoost:  # Defining parameters for XGBoost model
+  learning_rate: 0.1
+  n_estimators: 100
+  max_depth: 6
+  gamma: 0
+  colsample_bytree: 1.0
+  subsample: 1.0
+  reg_alpha: 0
+  reg_lambda: 1

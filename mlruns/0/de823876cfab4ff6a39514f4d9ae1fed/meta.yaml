@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/de823876cfab4ff6a39514f4d9ae1fed/artifacts
+end_time: 1738775957804
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de823876cfab4ff6a39514f4d9ae1fed
+run_name: carefree-vole-893
+run_uuid: de823876cfab4ff6a39514f4d9ae1fed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775954184
+status: 3
+tags: []
+user_id: ASUS

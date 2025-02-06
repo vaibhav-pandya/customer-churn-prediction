@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/9644b14fa62d4ad89215b1ca56517e8b/artifacts
+end_time: 1738774743426
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9644b14fa62d4ad89215b1ca56517e8b
+run_name: hilarious-bug-292
+run_uuid: 9644b14fa62d4ad89215b1ca56517e8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738774739006
+status: 3
+tags: []
+user_id: ASUS

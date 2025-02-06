@@ -24,10 +24,28 @@ class DataTransformationConfig:
 
 @dataclass(frozen=True)
 class ModelTrainerConfig:
-    root_dir: Path
-    train_data_path: Path
-    test_data_path: Path
+    root_dir: str
+    train_data_path: str
+    test_data_path: str
     model_name: str
-    alpha: float
-    l1_ratio: float
     target_column: str
+    
+    # XGBoost parameters
+    learning_rate: float
+    n_estimators: int
+    max_depth: int
+    gamma: float
+    colsample_bytree: float
+    subsample: float
+    reg_alpha: float
+    reg_lambda: float
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    all_params: dict
+    metric_file_name: Path
+    target_column: str
+    mlflow_uri: str

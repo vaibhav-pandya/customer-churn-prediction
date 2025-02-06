@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Data%20Science/Customer%20Churn%20Prediction%20with%20MLOps/mlruns/0/de9ef0411b094d72a8e7064c68562ff9/artifacts
+end_time: 1738775996431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de9ef0411b094d72a8e7064c68562ff9
+run_name: nebulous-grouse-576
+run_uuid: de9ef0411b094d72a8e7064c68562ff9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775992908
+status: 3
+tags: []
+user_id: ASUS

@@ -9,12 +9,13 @@ This project aims to predict customer churn using machine learning techniques. B
 1. [Introduction](#introduction)
 2. [Problem Statement](#problem-statement)
 3. [Data Description](#data-description)
-4. [Approach](#approach)
-5. [Technologies Used](#technologies-used)
-6. [Installation and Usage](#installation-and-usage)
-7. [Results and Insights](#results-and-insights)
-8. [Future Scope](#future-scope)
-9. [Contact](#contact)
+4. [Workflows](#workflows)
+5. [Approach](#approach)
+6. [Technologies Used](#technologies-used)
+7. [Installation and Usage](#installation-and-usage)
+8. [Results and Insights](#results-and-insights)
+9. [Future Scope](#future-scope)
+10. [Contact](#contact)
 
 ---
 
@@ -40,7 +41,22 @@ The dataset used for this project includes:
 
 ---
 
+## Workflows
+
+1. Update config.yaml
+2. Update schema.yaml
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline 
+8. Update the main.py
+9. Update the app.py
+
+---
+
 ## Approach
+
 1. **Exploratory Data Analysis (EDA)**:
    - Univariate, Bivariate, and Multivariate analysis.
    - Handling missing data, outliers, and skewness.

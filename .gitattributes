@@ -1,3 +1,4 @@
-*.py linguist-language="Python"
+# *.py linguist-language="Python"
 # * linguist-vendored
 # .html linguist-vendored
+*.html linguist-detectable=false

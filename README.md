@@ -1,5 +1,5 @@
 # Customer Churn Prediction 📉💡
-###### URL: *[Deploy your app and add the link here]*
+###### URL: https://hub.docker.com/repository/docker/vaibhavpandya/customerchurndetection/general
 
 This project aims to predict customer churn using machine learning techniques. By analyzing customer behavior, demographics, and service usage patterns, the goal is to identify key factors influencing churn and provide actionable insights for businesses to enhance customer retention.
 
@@ -52,13 +52,8 @@ The dataset used for this project includes:
 
 3. **Model Development**:
    - Experimented with models such as:
-     - Logistic Regression
-     - Random Forest
      - XGBoost
-   - Evaluated using metrics like accuracy, precision, recall, F1-score, and ROC-AUC.
-
-4. **Hyperparameter Tuning**:
-   - Optimized models using GridSearchCV or RandomizedSearchCV.
+   - Evaluated using metrics like rsme, mae, r2
 
 ---
 
@@ -93,13 +88,12 @@ The dataset used for this project includes:
 
 4. **Deploy the model** (*Optional*):
    ```bash
-   streamlit run app.py
+   python app.py
    ```
 
 ---
 
 ## Results and Insights
-- Achieved a model accuracy of **[Your Accuracy]%** on the test data.
 - Identified key factors influencing churn:
   - **Tenure**: Customers with shorter tenures are more likely to churn.
   - **Contract Type**: Month-to-month customers have a higher churn rate.
@@ -117,6 +111,6 @@ The dataset used for this project includes:
 
 ## Contact
 For any queries or feedback, please reach out to -<br>
-Email: your.email@example.com<br>
-[LinkedIn](https://www.linkedin.com/in/yourprofile/)
+Email: vaibhavpandya2903@gmail.com<br>
+[LinkedIn](https://www.linkedin.com/in/vaibhavpandya2903/)
 

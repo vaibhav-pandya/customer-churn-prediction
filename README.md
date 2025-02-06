@@ -72,7 +72,7 @@ The dataset used for this project includes:
 ## Installation and Usage
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/customer-churn-prediction.git
+   git clone https://github.com/vaibhav-pandya/customer-churn-prediction
    cd customer-churn-prediction
    ```
 
@@ -83,7 +83,7 @@ The dataset used for this project includes:
 
 3. **Run the model**:
    ```bash
-   python train.py
+   python main.py
    ```
 
 4. **Deploy the model** (*Optional*):

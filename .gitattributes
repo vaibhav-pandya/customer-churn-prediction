@@ -4,5 +4,5 @@
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.js linguist-detectable=false
-*.jinja linguist-detectable=false
+*.j2 linguist-detectable=false
 *.ipynb linguist-detectable=false

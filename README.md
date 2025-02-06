@@ -1,171 +1,116 @@
-# End-to-end-Machine-Learning-Project-with-MLflow
+# Customer Churn Prediction 📉💡
+###### URL: https://hub.docker.com/repository/docker/vaibhavpandya/customerchurndetection/general
+
+This project aims to predict customer churn using machine learning techniques. By analyzing customer behavior, demographics, and service usage patterns, the goal is to identify key factors influencing churn and provide actionable insights for businesses to enhance customer retention.
+
+---
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Problem Statement](#problem-statement)
+3. [Data Description](#data-description)
+4. [Approach](#approach)
+5. [Technologies Used](#technologies-used)
+6. [Installation and Usage](#installation-and-usage)
+7. [Results and Insights](#results-and-insights)
+8. [Future Scope](#future-scope)
+9. [Contact](#contact)
+
+---
+
+## Introduction
+Customer churn is a critical concern for businesses, particularly in subscription-based services. This project leverages machine learning models to predict whether a customer is likely to leave, allowing companies to take proactive measures to improve retention.
+
+---
+
+## Problem Statement
+Predict customer churn based on demographic, usage, and service-related data. The model should identify significant factors contributing to churn and help businesses devise strategies to reduce attrition.
+
+---
+
+## Data Description
+The dataset used for this project includes:
+- **Customer Demographics**: Age, gender, etc.
+- **Service Usage**: Monthly charges, contract type, tenure.
+- **Account Information**: Payment method, number of services subscribed.
+- **Churn Label**: Whether a customer churned (Yes/No).
+
+**Shape**: (7043, 21)<br>
+**Target Variable**: `Churn` (Binary: Yes/No)
+
+---
+
+## Approach
+1. **Exploratory Data Analysis (EDA)**:
+   - Univariate, Bivariate, and Multivariate analysis.
+   - Handling missing data, outliers, and skewness.
+
+2. **Feature Engineering**:
+   - Encoding categorical variables.
+   - Scaling numerical features.
+   - Creating new derived features.
+
+3. **Model Development**:
+   - Experimented with models such as:
+     - XGBoost
+   - Evaluated using metrics like rsme, mae, r2
+
+---
+
+## Technologies Used
+- **Programming Language**: Python 🐍
+- **Libraries**:
+  - Pandas, NumPy (Data preprocessing)
+  - Matplotlib, Seaborn (Visualization)
+  - Scikit-learn, XGBoost (Machine Learning)
+  - Jupyter Notebook (Development Environment)
+  - Docker (Containerization)
+  - DVC (Version Control for Machine Learning)
+
+---
+
+## Installation and Usage
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/vaibhav-pandya/customer-churn-prediction
+   cd customer-churn-prediction
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the model**:
+   ```bash
+   python main.py
+   ```
+
+4. **Deploy the model** (*Optional*):
+   ```bash
+   python app.py
+   ```
+
+---
+
+## Results and Insights
+- Identified key factors influencing churn:
+  - **Tenure**: Customers with shorter tenures are more likely to churn.
+  - **Contract Type**: Month-to-month customers have a higher churn rate.
+  - **Monthly Charges**: Higher charges correlate with increased churn risk.
+- Visualized customer segments to target retention strategies.
 
+---
 
-## Workflows
+## Future Scope
+- Implement real-time churn prediction with streaming data.
+- Deploy a web-based dashboard for business stakeholders.
+- Expand analysis to include customer sentiment from reviews or support tickets.
 
-1. Update config.yaml
-2. Update schema.yaml
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the app.py
+---
 
-
-
-# How to run?
-### STEPS:
-
-Clone the repository
-
-```bash
-https://github.com/vaibhav-pandya/customer-churn-prediction
-```
-### STEP 01- Create a conda environment after opening the repository
-
-```bash
-conda create -n mlproj python=3.8 -y
-```
-
-```bash
-conda activate mlproj
-```
-
-
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
-
-
-```bash
-# Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up you local host and port
-```
-
-
-
-## MLflow
-
-[Documentation](https://mlflow.org/docs/latest/index.html)
-
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-import dagshub
-dagshub.init(repo_owner='vaibhavpandya2903', repo_name='customer-churn-prediction', mlflow=True)
-
-import mlflow
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
-
-Run this to export as env variables:
-
-```bash
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/vaibhavpandya2903/customer-churn-prediction.mlflow
-
-export MLFLOW_TRACKING_USERNAME=vaibhavpandya2903 
-
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
-
-```
-
-
-
-# AWS-CICD-Deployment-with-Github-Actions
-
-## 1. Login to AWS console.
-
-## 2. Create IAM user for deployment
-
-	#with specific access
-
-	1. EC2 access : It is virtual machine
-
-	2. ECR: Elastic Container registry to save your docker image in aws
-
-
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
-
-
-
-
-## About MLflow 
-MLflow
-
- - Its Production Grade
- - Trace all of your expriements
- - Logging & tagging your model
-
+## Contact
+For any queries or feedback, please reach out to -<br>
+Email: vaibhavpandya2903@gmail.com<br>
+[LinkedIn](https://www.linkedin.com/in/vaibhavpandya2903/)
 
